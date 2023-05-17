@@ -71,7 +71,7 @@ def parse_args():
     parser.add_argument(
         "--steps",
         type=int,
-        default=50,
+        default=25,
         help="number of ddim sampling steps",
     )
     parser.add_argument(
@@ -98,7 +98,7 @@ def parse_args():
     parser.add_argument(
         "--n_iter",
         type=int,
-        default=3,
+        default=1,
         help="sample this often",
     )
     parser.add_argument(
@@ -128,7 +128,7 @@ def parse_args():
     parser.add_argument(
         "--n_samples",
         type=int,
-        default=3,
+        default=1,
         help="how many samples to produce for each given prompt. A.k.a batch size",
     )
     parser.add_argument(
@@ -320,7 +320,9 @@ def main(opt):
         grid_count += 1
 
     print(
-        f"Your samples are ready and waiting for you here: \n{outpath} \n" f" \nEnjoy."
+        "Your samples are ready and waiting for you here: \n"
+        f"{outpath}\n"
+        "Enjoy."
     )
 
 
