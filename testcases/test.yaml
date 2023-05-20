@@ -1,0 +1,22 @@
+airplane:
+  type: "generate"
+  steps: 15
+  prompt: "A civil aircraft departing from the runway."
+  save_intermediates: False
+
+cat:
+  type: "generate"
+  steps: 20
+  prompt: "A cat running on an icy ground."
+  # Below is optional because `save_intermediates` is `True` by default.
+  # save_intermediates: True
+
+cat_to_dog:
+  type: "resume"
+  resume_from: 10
+  prompt: "A dog running on an icy ground."
+
+cat_to_horse:
+  type: "resume"
+  resume_from: 10
+  prompt: "A horse running on an icy ground."
